@@ -8,8 +8,8 @@ export default function ShakingText() {
   return (
     <div>
       <h1 className="shaking-text">
-        {text.split("").map((t) => (
-          <span>{t}</span>
+        {text.split("").map((t, i) => (
+          <span key={`${i}-${t}`}>{t}</span>
         ))}
       </h1>
     </div>
